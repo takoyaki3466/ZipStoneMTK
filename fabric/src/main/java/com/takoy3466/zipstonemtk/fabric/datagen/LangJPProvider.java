@@ -1,6 +1,7 @@
 package com.takoy3466.zipstonemtk.fabric.datagen;
 
 import com.takoy3466.zipstonemtk.init.BlocksInit;
+import com.takoy3466.zipstonemtk.init.TabsInit;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -18,6 +19,8 @@ public class LangJPProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         add(translationBuilder, BlocksInit.BLOCKS_AND_ITEMS.block(), "丸石");
+
+        translationBuilder.add(TabsInit.MAIN_TAB.getKey(), "ZipStoneMTK");
     }
 
     private void add(TranslationBuilder builder, List<RegistrySupplier<Block>> blocks, String baseName) {
